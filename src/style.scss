@@ -26,7 +26,7 @@ $theme-font-color: #2c2c2c;
 
 //common styles
 body {
-  padding-top: 100px;
+  padding-top: 130px;
 
   font: {
     family: "Roboto", sans-serif;
@@ -99,6 +99,22 @@ body {
 
 .main-nav__expandable {
   display: none;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+
+  font: {
+    size: 25px;
+    weight: 700;
+  }
+
+  border-radius: 50%;
+  background-color: #eee;
 }
 
 // NAV STYLES !!!YOU NEED THEM

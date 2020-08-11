@@ -1,5 +1,5 @@
 body {
-  padding-top: 100px;
+  padding-top: 130px;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   color: #2c2c2c;
@@ -56,6 +56,21 @@ body a {
 
 .main-nav__expandable {
   display: none;
+}
+
+.logo {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  width: 50px;
+  height: 50px;
+  font-size: 25px;
+  font-weight: 700;
+  border-radius: 50%;
+  background-color: #eee;
 }
 
 .main-nav {
