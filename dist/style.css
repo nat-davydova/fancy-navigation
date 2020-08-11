@@ -53,3 +53,7 @@ body a {
   font-style: italic;
   text-align: center;
 }
+
+.main-nav__expandable {
+  display: none;
+}
