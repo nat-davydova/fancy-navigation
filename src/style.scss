@@ -58,8 +58,6 @@ body {
 
   cursor: pointer;
 
-  outline: none;
-
   &:last-child {
     margin-right: 0;
   }
@@ -121,6 +119,11 @@ body {
 $nav-dark-color: #2c2c2c;
 $nav-light-color: #fff;
 
+$toggler-width: 40px;
+$toggler-height: 25px;
+
+$toggler-bar-height: 3px;
+
 .main-nav {
   position: fixed;
   top: 0;
@@ -149,4 +152,38 @@ $nav-light-color: #fff;
   align-items: center;
   width: 100%;
   height: 100%;
+}
+
+.toggler-open {
+  position: relative;
+
+  width: $toggler-width;
+  height: $toggler-height;
+
+  border: none;
+  background-color: transparent;
+
+  cursor: pointer;
+}
+
+.toggler-open__bar {
+  @include position-absolute($left: 0);
+
+  width: 100%;
+  height: $toggler-bar-height;
+
+  background-color: $nav-light-color;
+  border-radius: $toggler-bar-height;
+
+  &:nth-child(1) {
+    top: 0;
+  }
+
+  &:nth-child(2) {
+    top: $toggler-bar-height * 4;
+  }
+
+  &:nth-child(3) {
+    top: $toggler-bar-height * 8;
+  }
 }
