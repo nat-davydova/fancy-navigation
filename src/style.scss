@@ -26,7 +26,7 @@ $theme-font-color: #2c2c2c;
 
 //common styles
 body {
-  padding-top: 40px;
+  padding-top: 100px;
 
   font: {
     family: "Roboto", sans-serif;
@@ -99,4 +99,38 @@ body {
 
 .main-nav__expandable {
   display: none;
+}
+
+// NAV STYLES !!!YOU NEED THEM
+$nav-dark-color: #2c2c2c;
+$nav-light-color: #fff;
+
+.main-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  padding: 20px 0;
+
+  background-color: $nav-dark-color;
+  box-shadow: 0 8px 17px 2px rgba(0, 0, 0, 0.14),
+    0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
+
+  z-index: 900;
+}
+
+.container {
+  width: 95%;
+  max-width: 1090px;
+  height: 100%;
+  margin: auto;
+}
+
+.main-nav__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
