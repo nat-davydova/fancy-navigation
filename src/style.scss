@@ -216,6 +216,10 @@ $toggler-bar-height: 3px;
   &:before,
   &:after {
     @include position-absolute($top: 45%, $left: 5%);
+    @include transition-mix(
+      $duration: 0.15s,
+      $timing: cubic-bezier(0, 1.07, 1, 2.71)
+    );
 
     display: block;
     width: 90%;
@@ -234,9 +238,22 @@ $toggler-bar-height: 3px;
   &:after {
     transform: rotate(-45deg);
   }
+
+  &:hover,
+  &:focus {
+    &:before {
+      transform: rotate(25deg);
+    }
+
+    &:after {
+      transform: rotate(-25deg);
+    }
+  }
 }
 
 .main-nav__expandable {
+  display: none;
+
   position: fixed;
   top: 0;
   left: 0;
@@ -257,4 +274,44 @@ $toggler-bar-height: 3px;
   justify-content: space-between;
   width: 100%;
   height: 100%;
+}
+
+.main-nav__list {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+
+  list-style-type: none;
+}
+
+.main-nav__item {
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+.main-nav__link {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  color: $nav-dark-color;
+}
+
+.main-nav__link-title {
+  font: {
+    size: 3.4rem;
+    weight: 700;
+  }
+  letter-spacing: 2px;
+}
+
+.main-nav__link-descr {
+  margin-top: 5px;
+
+  font: {
+    style: italic;
+  }
 }

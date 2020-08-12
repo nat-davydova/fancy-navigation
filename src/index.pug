@@ -13,7 +13,7 @@ header.header
 //- links list mixin
 mixin nav-item(linkHref, linkTitle, linkDescr)
   li.main-nav__item
-    a.main-nav__link(href=linkHref, linkTitle=linkTitle)
+    a.main-nav__link(href=linkHref, title=linkTitle)
       span.main-nav__link-title= linkTitle
       span.main-nav__link-descr= linkDescr
 
@@ -42,8 +42,6 @@ nav.main-nav
             ul.main-nav__list
               +nav-item('#', 'Home', 'Return to a Home Page')
               +nav-item('#', 'Features', 'Read more about our amazing features!')
-              +nav-item('#', 'Services', 'You would like our services highest quality')
               +nav-item('#', 'Pricing', 'Check annual and monthly plans')
-              +nav-item('#', 'Testimonials', 'Our clients enjoy our service!')
               +nav-item('#', 'FAQ', 'Answers to all the common questions are here')
               +nav-item('#', 'Contacts', 'Send us a message! We have 24/7 support')
