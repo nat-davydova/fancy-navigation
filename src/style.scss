@@ -114,6 +114,7 @@ body {
 // NAV STYLES !!!YOU NEED THEM
 $nav-dark-color: #2c2c2c;
 $nav-light-color: #fff;
+$nav-padding: 20px;
 
 $toggler-width: 40px;
 $toggler-height: 25px;
@@ -126,7 +127,7 @@ $toggler-bar-height: 3px;
   left: 0;
 
   width: 100%;
-  padding: 20px 0;
+  padding: $nav-padding 0;
 
   background-color: $nav-dark-color;
   box-shadow: 0 8px 17px 2px rgba(0, 0, 0, 0.14),
@@ -203,4 +204,27 @@ $toggler-bar-height: 3px;
   &:nth-child(3) {
     top: $toggler-bar-height * 8;
   }
+}
+
+.main-nav__expandable {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  padding: $nav-padding 0;
+
+  background-color: rgba($nav-light-color, 0.8);
+
+  z-index: 999;
+}
+
+.main-nav__expandable-inner {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
 }

@@ -31,17 +31,19 @@ nav.main-nav
 
       //nav expandable area
       .main-nav__expandable
-        //nav close btn
-        button.main-nav__close-btn.toggler-close(
-          type="button",
-          title="Close Menu"
-        )
-        //nav links list
-        ul.main-nav__list
-          +nav-item('#', 'Home', 'Return to a Home Page')
-          +nav-item('#', 'Features', 'Read more about our amazing features!')
-          +nav-item('#', 'Services', 'You would like our services highest quality')
-          +nav-item('#', 'Pricing', 'Check annual and monthly plans')
-          +nav-item('#', 'Testimonials', 'Our clients enjoy our service!')
-          +nav-item('#', 'FAQ', 'Answers to all the common questions are here')
-          +nav-item('#', 'Contacts', 'Send us a message! We have 24/7 support')
+        .container
+          .main-nav__expandable-inner
+            //nav close btn
+            button.main-nav__close-btn.toggler-close(
+              type="button",
+              title="Close Menu"
+            )
+            //nav links list
+            ul.main-nav__list
+              +nav-item('#', 'Home', 'Return to a Home Page')
+              +nav-item('#', 'Features', 'Read more about our amazing features!')
+              +nav-item('#', 'Services', 'You would like our services highest quality')
+              +nav-item('#', 'Pricing', 'Check annual and monthly plans')
+              +nav-item('#', 'Testimonials', 'Our clients enjoy our service!')
+              +nav-item('#', 'FAQ', 'Answers to all the common questions are here')
+              +nav-item('#', 'Contacts', 'Send us a message! We have 24/7 support')
