@@ -1,0 +1,48 @@
+//PEN HEADER
+header.header
+  h1.header__title Fancy Navigation
+  .header__subtitle (click burger icon and hover links then)
+  .header__btns.btns
+    a.header__btn.btn(
+      href="https://github.com/nat-davydova/fancy-navigation",
+      title="Check on Github",
+      target="_blank"
+    ) Check on Github
+
+//PEN CONTENT
+//- links list mixin
+mixin nav-item(linkHref, linkTitle, linkDescr)
+  li.main-nav__item(data-add-text)
+    a.main-nav__link(href=linkHref, title=linkTitle)
+      span.main-nav__link-title= linkTitle
+      span.main-nav__link-descr= linkDescr
+
+nav.main-nav
+  .container
+    .main-nav__inner
+      // logo block
+      a.logo(href="#", title="Our Nice Logo") L
+
+      //nav open button
+      button.main-nav__toggler.toggler-open(type="button", title="Open Menu")
+        .toggler-open__bar
+        .toggler-open__bar
+        .toggler-open__bar
+
+      //nav expandable area
+      .main-nav__expandable
+        .main-nav__expandable-inner
+          .container
+            .main-nav__expandable-content
+              //nav close btn
+              button.main-nav__toggler.toggler-close(
+                type="button",
+                title="Close Menu"
+              )
+              //nav links list
+              ul.main-nav__list
+                +nav-item('#', 'Home', 'Return to a Home Page')
+                +nav-item('#', 'Features', 'Read more about our amazing features!')
+                +nav-item('#', 'Pricing', 'Check annual and monthly plans')
+                +nav-item('#', 'FAQ', 'Answers to all the common questions are here')
+                +nav-item('#', 'Contacts', 'Send us a message! We have 24/7 support')

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Fancy Navigation (+ hover effects)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!--PEN HEADER-->
+<header class="header">
+  <h1 class="header__title">Fancy Navigation</h1>
+  <div class="header__subtitle">(click burger icon and hover links then)</div>
+  <div class="header__btns btns"><a class="header__btn btn" href="https://github.com/nat-davydova/fancy-navigation" title="Check on Github" target="_blank">Check on Github</a></div>
+</header>
+<!--PEN CONTENT-->
+<nav class="main-nav">
+  <div class="container">
+    <div class="main-nav__inner">
+      <!-- logo block--><a class="logo" href="#" title="Our Nice Logo">L</a>
+      <!--nav open button-->
+      <button class="main-nav__toggler toggler-open" type="button" title="Open Menu">
+        <div class="toggler-open__bar"></div>
+        <div class="toggler-open__bar"></div>
+        <div class="toggler-open__bar"></div>
+      </button>
+      <!--nav expandable area-->
+      <div class="main-nav__expandable">
+        <div class="main-nav__expandable-inner">
+          <div class="container">
+            <div class="main-nav__expandable-content">
+              <!--nav close btn-->
+              <button class="main-nav__toggler toggler-close" type="button" title="Close Menu"></button>
+              <!--nav links list-->
+              <ul class="main-nav__list">
+                <li class="main-nav__item" data-add-text="data-add-text"><a class="main-nav__link" href="#" title="Home"><span class="main-nav__link-title">Home</span><span class="main-nav__link-descr">Return to a Home Page</span></a></li>
+                <li class="main-nav__item" data-add-text="data-add-text"><a class="main-nav__link" href="#" title="Features"><span class="main-nav__link-title">Features</span><span class="main-nav__link-descr">Read more about our amazing features!</span></a></li>
+                <li class="main-nav__item" data-add-text="data-add-text"><a class="main-nav__link" href="#" title="Pricing"><span class="main-nav__link-title">Pricing</span><span class="main-nav__link-descr">Check annual and monthly plans</span></a></li>
+                <li class="main-nav__item" data-add-text="data-add-text"><a class="main-nav__link" href="#" title="FAQ"><span class="main-nav__link-title">FAQ</span><span class="main-nav__link-descr">Answers to all the common questions are here</span></a></li>
+                <li class="main-nav__item" data-add-text="data-add-text"><a class="main-nav__link" href="#" title="Contacts"><span class="main-nav__link-title">Contacts</span><span class="main-nav__link-descr">Send us a message! We have 24/7 support</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
