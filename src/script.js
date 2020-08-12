@@ -3,11 +3,24 @@
   const PATH = {
     closeToggler: ".toggler-close",
     expandableNav: ".main-nav__expandable",
-    linkItem: ".main-nav__link",
+    navItem: ".main-nav__item",
     openToggler: ".toggler-open"
   };
 
   // *** HELPERS
+  const editDataAttr = (elem, dataAttr, newVal) => {
+    elem.dataset[dataAttr] = newVal;
+  };
+
+  const setDataAtrsToNavElems = () => {
+    const navElems = Array.from(document.querySelectorAll(PATH.navItem));
+
+    navElems.forEach((elem, index) => {
+      editDataAttr(elem, "addText", `0${index + 1}`);
+    });
+  };
+
+  setDataAtrsToNavElems();
 
   // *** EVENT LISTENERS
   document.body.addEventListener("click", (e) => {

@@ -12,7 +12,7 @@ header.header
 //PEN CONTENT
 //- links list mixin
 mixin nav-item(linkHref, linkTitle, linkDescr)
-  li.main-nav__item
+  li.main-nav__item(data-add-text)
     a.main-nav__link(href=linkHref, title=linkTitle)
       span.main-nav__link-title= linkTitle
       span.main-nav__link-descr= linkDescr
