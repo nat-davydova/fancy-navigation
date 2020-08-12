@@ -95,10 +95,6 @@ body {
   text-align: center;
 }
 
-.main-nav__expandable {
-  display: none;
-}
-
 .logo {
   display: flex;
   justify-content: center;
@@ -165,7 +161,8 @@ $toggler-bar-height: 3px;
 
   cursor: pointer;
 
-  &:hover {
+  &:hover,
+  &:focus {
     .toggler-open__bar {
       &:nth-child(1) {
         transform: scaleX(1.1) translateY(-3px);
@@ -185,7 +182,7 @@ $toggler-bar-height: 3px;
 .toggler-open__bar {
   @include position-absolute($left: 0);
   @include transition-mix(
-    $duration: 0.3s,
+    $duration: 0.2s,
     $timing: cubic-bezier(0, 1.07, 1, 2.71)
   );
 

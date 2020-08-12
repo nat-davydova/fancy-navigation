@@ -17,10 +17,15 @@ nav.main-nav
       a.logo(href="#", title="Our Nice Logo") L
 
       //nav open button
-      button.main-nav__open-btn.toggler-open(type="Button", title="Open Menu")
+      button.main-nav__open-btn.toggler-open(type="button", title="Open Menu")
         .toggler-open__bar
         .toggler-open__bar
         .toggler-open__bar
 
       //nav expandable area
       .main-nav__expandable
+        //nav close btn
+        button.main-nav__close-btn.toggler-close(
+          type="button",
+          title="Close Menu"
+        )
