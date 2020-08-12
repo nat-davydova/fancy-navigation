@@ -1,5 +1,12 @@
 # Fancy Navigation (+ hover effects)
 
-A Pen created on CodePen.io. Original URL: [https://codepen.io/nat-davydova/pen/09117b8f2d45a948379d808497b1fb33](https://codepen.io/nat-davydova/pen/09117b8f2d45a948379d808497b1fb33).
+[Check the Demo](https://codepen.io/nat-davydova/full/jOqbVwg)
+
+<img src="http://natali-davydova.me/assets/img/portfolio/fancy-nav/full-1.png" width="650" />
+
+- HTML/Pug
+- SCSS/CSS
+- JS (ES6)
+
 
 
