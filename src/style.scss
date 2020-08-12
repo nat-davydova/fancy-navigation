@@ -111,13 +111,17 @@ body {
   background-color: #eee;
 }
 
+.toggler-close {
+  top: 11px;
+}
+
 // NAV STYLES !!!YOU NEED THEM
 $nav-dark-color: #2c2c2c;
 $nav-light-color: #fff;
 $nav-padding: 20px;
 
 $toggler-width: 40px;
-$toggler-height: 25px;
+$toggler-height: 28px;
 
 $toggler-bar-height: 3px;
 
@@ -151,7 +155,7 @@ $toggler-bar-height: 3px;
   height: 100%;
 }
 
-.toggler-open {
+.main-nav__toggler {
   position: relative;
 
   width: $toggler-width;
@@ -161,7 +165,9 @@ $toggler-bar-height: 3px;
   background-color: transparent;
 
   cursor: pointer;
+}
 
+.toggler-open {
   &:hover,
   &:focus {
     .toggler-open__bar {
@@ -206,6 +212,30 @@ $toggler-bar-height: 3px;
   }
 }
 
+.toggler-close {
+  &:before,
+  &:after {
+    @include position-absolute($top: 45%, $left: 5%);
+
+    display: block;
+    width: 90%;
+    height: $toggler-bar-height;
+
+    content: "";
+
+    background-color: $nav-dark-color;
+    border-radius: $toggler-bar-height;
+  }
+
+  &:before {
+    transform: rotate(45deg);
+  }
+
+  &:after {
+    transform: rotate(-45deg);
+  }
+}
+
 .main-nav__expandable {
   position: fixed;
   top: 0;
@@ -215,7 +245,7 @@ $toggler-bar-height: 3px;
   height: 100%;
   padding: $nav-padding 0;
 
-  background-color: rgba($nav-light-color, 0.8);
+  background-color: $nav-light-color;
 
   z-index: 999;
 }
