@@ -294,6 +294,32 @@ body a {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
 }
+.main-nav__expandable.js-open .main-nav__list {
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0s;
+          transition-duration: 0s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  -webkit-transition-delay: 4.4s;
+          transition-delay: 4.4s;
+  opacity: 1;
+  visibility: visible;
+}
+.main-nav__expandable.js-open .toggler-close {
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: cubic-bezier(0.14, 1.01, 0.54, 1.38);
+          transition-timing-function: cubic-bezier(0.14, 1.01, 0.54, 1.38);
+  -webkit-transition-delay: 0.65s;
+          transition-delay: 0.65s;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+}
 
 .main-nav__expandable-inner {
   -webkit-transition-property: all;
@@ -310,6 +336,14 @@ body a {
           transform-origin: left center;
 }
 
+.toggler-close {
+  -webkit-transform: translateX(15px);
+          transform: translateX(15px);
+  opacity: 0;
+  visibility: hidden;
+}
+
 .main-nav__list {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
 }

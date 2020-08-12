@@ -362,6 +362,26 @@ $toggler-bar-height: 3px;
     .main-nav__expandable-inner {
       transform: scaleX(1);
     }
+
+    .main-nav__list {
+      @include transition-mix($duration: 0s, $delay: 4.4s);
+
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .toggler-close {
+      @include transition-mix(
+        $duration: 0.2s,
+        $delay: 0.65s,
+        $timing: cubic-bezier(0.14, 1.01, 0.54, 1.38)
+      );
+
+      transform: translateX(0);
+
+      opacity: 1;
+      visibility: visible;
+    }
   }
 }
 
@@ -372,6 +392,14 @@ $toggler-bar-height: 3px;
   transform-origin: left center;
 }
 
+.toggler-close {
+  transform: translateX(15px);
+
+  opacity: 0;
+  visibility: hidden;
+}
+
 .main-nav__list {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
 }
