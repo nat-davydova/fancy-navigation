@@ -3,8 +3,11 @@
   const PATH = {
     closeToggler: ".toggler-close",
     expandableNav: ".main-nav__expandable",
+    linkItem: ".main-nav__link",
     openToggler: ".toggler-open"
   };
+
+  // *** HELPERS
 
   // *** EVENT LISTENERS
   document.body.addEventListener("click", (e) => {
