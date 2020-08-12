@@ -31,17 +31,18 @@ nav.main-nav
 
       //nav expandable area
       .main-nav__expandable
-        .container
-          .main-nav__expandable-inner
-            //nav close btn
-            button.main-nav__toggler.toggler-close(
-              type="button",
-              title="Close Menu"
-            )
-            //nav links list
-            ul.main-nav__list
-              +nav-item('#', 'Home', 'Return to a Home Page')
-              +nav-item('#', 'Features', 'Read more about our amazing features!')
-              +nav-item('#', 'Pricing', 'Check annual and monthly plans')
-              +nav-item('#', 'FAQ', 'Answers to all the common questions are here')
-              +nav-item('#', 'Contacts', 'Send us a message! We have 24/7 support')
+        .main-nav__expandable-inner
+          .container
+            .main-nav__expandable-content
+              //nav close btn
+              button.main-nav__toggler.toggler-close(
+                type="button",
+                title="Close Menu"
+              )
+              //nav links list
+              ul.main-nav__list
+                +nav-item('#', 'Home', 'Return to a Home Page')
+                +nav-item('#', 'Features', 'Read more about our amazing features!')
+                +nav-item('#', 'Pricing', 'Check annual and monthly plans')
+                +nav-item('#', 'FAQ', 'Answers to all the common questions are here')
+                +nav-item('#', 'Contacts', 'Send us a message! We have 24/7 support')
